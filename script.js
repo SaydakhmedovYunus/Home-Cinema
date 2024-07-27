@@ -1,0 +1,31 @@
+let openWindow_1 = document.querySelector('.menu_1');
+openWindow_1.addEventListener('click', openFirstMenu);
+
+function openFirstMenu() {
+  console.log('Я работаю');
+  let window_1 = document.querySelector('.window_1').style.display = 'block';
+  let window_nav_1 = document.querySelector('.window_nav').style.display = 'flex';
+}
+
+let closeWindow_1 = document.querySelector('.close_1');
+closeWindow_1.addEventListener('click', closeFirstMenu);
+function closeFirstMenu() {
+  console.log('Я работаю тоже');
+  let window_1 = document.querySelector('.window_1').style.display = 'none';
+}
+
+let openWindow_2 = document.querySelector('.menu_2');
+openWindow_2.addEventListener('click', openSecondMenu);
+
+function openSecondMenu() {
+  console.log('Да я тоже работаю');
+  let window_2 = document.querySelector('.window_2').style.display = 'block';
+  let window_nav_2 = document.querySelector('.window_nav2').style.display = 'flex';
+}
+
+let closeWindow_2 = document.querySelector('.close_2');
+closeWindow_2.addEventListener('click', closeSecondMenu);
+function closeSecondMenu() {
+  console.log('Я закрылся');
+  let window_2 = document.querySelector('.window_2').style.display = 'none';
+}
