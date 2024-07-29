@@ -312,7 +312,7 @@ display: none;
     width:calc(6.06vw + 145.8px);
   }
 }
-@media (max-width:330px) {
+@media (max-width:360px) {
   .film_card {
   background-repeat: no-repeat;
     background-size: contain;
@@ -429,4 +429,22 @@ display: none;
   gap: 17px;
   justify-content: center;
   align-items:center;
+}
+.likes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.likes button{
+  background-image: url(./img/like.png);
+  background-size: contain;
+  background-color: #1B2133;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  width: calc(1.75vw + 24.4px);
+  height: 30px;
+  border-radius: 10px;
 }
