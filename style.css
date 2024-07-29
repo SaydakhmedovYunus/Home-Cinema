@@ -312,7 +312,7 @@ display: none;
     width:calc(6.06vw + 145.8px);
   }
 }
-@media (max-width:360px) {
+@media (max-width:350px) {
   .film_card {
   background-repeat: no-repeat;
     background-size: contain;
@@ -321,6 +321,7 @@ display: none;
   .film_cards {
     gap: 5px;
   }
+  
 }
 .see_new_films {
   background-color: transparent;
@@ -349,6 +350,9 @@ display: none;
   flex-direction: column;
   justify-content: space-around;
   gap: 20px;
+}
+.new_trailers video {
+  border-radius: 12px;
 }
 .new_trailers div {
   display: flex;
@@ -437,14 +441,33 @@ display: none;
   align-items: center;
   gap: 5px;
 }
-.likes button{
-  background-image: url(./img/like.png);
+.likes div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.likes div span {
+  font-family: 'Qanelas', sans-serif;
+  font-size: calc(0.375vw + 7.8px);
+  line-height: 17.85px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.likes div button{
   background-size: contain;
   background-color: #1B2133;
-  background-position: center;
-  background-repeat: no-repeat;
   border: none;
   width: calc(1.75vw + 24.4px);
   height: 30px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.likes div button img {
+  width: calc(0.81vw + 10.4px);
+  height: 13.45px;
 }
