@@ -275,7 +275,7 @@ display: none;
 
 }
 .film_card {
-  width: calc(10.06vw + 145.8px);
+  width: calc(8vw + 145.8px);
   display: flex;
   flex-direction: column;
   gap: 9px;
