@@ -29,3 +29,18 @@ function closeSecondMenu() {
   console.log('Я закрылся');
   let window_2 = document.querySelector('.window_2').style.display = 'none';
 }
+
+let openWindow_3 = document.querySelector('.menu_3');
+openWindow_3.addEventListener('click', openThirdMenu);
+
+function openThirdMenu() {
+  console.log('По годам');
+  let window_3 = document.querySelector('.window_3').style.display = 'flex';
+  let closed = document.querySelector('.closed').style.display = 'flex';
+  let years_window = document.querySelector('.years_window').style.display = 'flex';
+}
+let closeWindow_3 = document.querySelector('.close_3');
+closeWindow_3.addEventListener('click', closeThirdMenu);
+function closeThirdMenu() {
+  let window_3 = document.querySelector('.window_3').style.display = 'none';
+}
