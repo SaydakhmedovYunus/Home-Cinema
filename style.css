@@ -200,6 +200,7 @@ display: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     z-index: 1000;
     transition: 0.3s ease;
+    opacity: 85%;
 }
 .window_1 div {
   margin-top: 20px;
@@ -238,6 +239,7 @@ display: none;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     z-index: 1000;
+    opacity: 85%;
 }
 .window_2 div {
   margin-top: 20px;
@@ -280,16 +282,18 @@ display: none;
   flex-direction: column;
   gap: 9px;
 }
-.film_card h4 {
+.film_card a {
   font-family: 'Qanelas',sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 22.3px;
   text-align: left;
   color: gray;
+  cursor: pointer;
 }
-.film_card h4:hover {
+.film_card a:hover {
   color:#FFFFFF;
+  transition: 0.5s;
 }
 .film_card span {
   color:#F2F60F;
@@ -338,6 +342,7 @@ display: none;
   line-height: 29.97px;
   text-align: center;
   color: #FFFFFF;
+  cursor: pointer;
 }
 /* new_films end */
 
@@ -354,7 +359,7 @@ display: none;
 .new_trailers video {
   border-radius: 12px;
 }
-.new_trailers div {
+.new_trailers .all_side {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -369,7 +374,7 @@ display: none;
   text-align: left;
   color: #FFFFFF;
 }
-.new_trailers a {
+.new_trailers .all_trailers {
   font-family: 'Qanelas', sans-serif;
   font-size: calc(0.25vw + 17.2px);
   font-weight: 700;
@@ -378,7 +383,7 @@ display: none;
   color:#FFFFFF;
   text-decoration: none;
 }
-.new_trailers div a::after {
+.new_trailers div .all_trailers::after {
   content: '\2192';
 }
 @media (max-width:1920px) {
@@ -419,6 +424,13 @@ display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items:center
+}
+@media (max-width:600px) {
+  #new_title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
 }
 #new_title h3 {
   font-family: 'Qanelas', sans-serif;
@@ -470,4 +482,159 @@ display: none;
 .likes div button img {
   width: calc(0.81vw + 10.4px);
   height: 13.45px;
+}
+
+
+
+
+div.scroll-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color:transparent;
+  overflow: auto;  /*Прокрутка overflow */
+  white-space: nowrap;
+  padding: 10px;
+}
+div.scroll-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+}
+div.scroll-container img {
+  width: calc(10.25vw + 145.2px);
+}
+div.scroll-container a {
+  text-decoration: none;
+  color: gray;
+  font-family: 'Qanelas', sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 19.11px;
+  cursor: pointer;
+}
+div.scroll-container a:hover {
+  color:#FFFFFF;
+  transition: 0.5s;
+}
+
+div.scroll-container::-webkit-scrollbar {
+  width: 100%;
+  height: 5px;
+}
+
+div.scroll-container::-webkit-scrollbar-track {
+  background: #1B2133;
+}
+div.scroll-container::-webkit-scrollbar-thumb {
+  background: #3657CB;
+  border-radius: 10px;
+}
+/*popular_films start */
+.popular_films {
+  margin: 0 calc(14vw - 25px);
+  display: flex;
+  flex-direction: column;
+}
+.popular_films .populars_side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 50px;
+}
+.popular_films .populars_side h1 {
+  font-family: 'Qanelas', sans-serif;
+  font-size: calc(2.06vw + 25.4px);
+  font-weight: 900;
+  color:#FFFFFF;
+}
+.years {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.years button {
+  font-family: 'Qanelas', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.3px;
+  border:none;
+  background-color:transparent;
+  color:gray;
+}
+.years button:hover {
+  color:#FFFFFF;
+}
+.menu_3 {
+  display: none;
+}
+
+@media (max-width:600px){
+  .years {
+    display: none;
+  }
+  .line2{
+    display: none;
+  }
+  .menu_3 {
+    display: block;
+  }
+  .popular_films .populars_side h1 {
+    font-size: 20px;
+  }
+}
+.window_3 {
+  display: none;
+  flex-direction: column;
+  background-color:#1B2133;
+  gap: 15px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#1E2538;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: 0.3s ease;
+  opacity: 85%;
+}
+.closed {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+}
+
+.years_window {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.years_window button {
+  font-family: 'Qanelas', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.3px;
+  border:none;
+  background-color:transparent;
+  color:gray;
+}
+.years_window button:hover {
+  color:#FFFFFF;
+  transition: 0.5s;
+}
+.years_window {
+  display: none;
+}
+.closed {
+  display: none;
 }
